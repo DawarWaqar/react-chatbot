@@ -1,177 +1,5 @@
 import { useState } from "react";
 
-const Style = () => (
-  <style>
-    {`
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      padding: 0px;
-      margin: 0px;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: white;
-    }
-    .main-container {
-      display: flex;
-      height: 100vh;
-      padding: 0px;
-      margin: 0px;
-    }
-    .sidebar {
-      width: 25%;
-      min-width: 220px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background-color: #eee;
-      color: #333;
-      padding: 20px;
-      border-right: 1px solid #ddd;
-    }
-    .sidebar-logo {
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .logo-m {
-      color: green;
-    }
-    .sidebar-chats {
-      flex-grow: 1;
-      overflow-y: auto;
-    }
-    .sidebar-buttons {
-      flex-shrink: 0;
-      padding-top: 15px;
-      margin-top: 15px;
-      border-top: 1px solid #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .thread {
-      width: 75%;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      padding: 20px;
-      background-color: white;
-    }
-    .thread-messages {
-      flex-grow: 1;
-      overflow-y: auto;
-      width: 100%;
-      padding-right: 15px;
-    }
-    .thread-input-container {
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding-top: 15px;
-      border-top: 1px solid #eee;
-    }
-    .input-wrapper {
-      display: flex;
-      width: 100%;
-    }
-    .chat-title {
-      padding: 10px 15px;
-      font-size: 1rem;
-      margin-bottom: 8px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .chat-title:hover {
-      background-color: lightgrey;
-    }
-    .active-chat {
-      background-color: dodgerblue;
-      color: white;
-      font-weight: bold;
-    }
-    .sidebar-btn {
-      padding: 12px 20px;
-      margin-right: 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      color: white;
-      font-size: 1rem;
-    }
-    .add-chat-btn {
-      background-color: green;
-    }
-    .clear-chat-btn {
-      background-color: red;
-    }
-    .message-container {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-      gap: 12px;
-    }
-    .message {
-      padding: 12px 18px;
-      border-radius: 6px;
-      max-width: 70%;
-      font-size: 1rem;
-    }
-    .user-message {
-      background-color: dodgerblue;
-      color: white;
-      align-self: flex-end;
-    }
-    .bot-message {
-      background-color: #eee;
-      color: #333;
-      align-self: flex-start;
-    }
-    .chat-input {
-      width: 88%;
-      margin-right: 12px;
-      padding: 12px 18px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    .submit-btn {
-      width: 12%;
-      border: none;
-      background-color: dodgerblue;
-      color: white;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .sticky-note {
-      background-color: lightyellow;
-      border: 1px solid goldenrod;
-      padding: 17px;
-      margin-top: 15px;
-      border-radius: 5px;
-      position: relative;
-      font-size: 0.9rem;
-      color: #333;
-    }
-    .sticky-note-close {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #888;
-    }
-    `}
-  </style>
-);
-
 const App = () => {
   const [chats, setChats] = useState([]);
   const [activeChatId, setActiveChatId] = useState(null);
@@ -349,5 +177,178 @@ const Thread = ({ activeChatId, setChats, chats }) => {
     </>
   );
 };
+
+const Style = () => (
+  // made a component to save me from messy inline styling
+  <style>
+    {`
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      padding: 0px;
+      margin: 0px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: white;
+    }
+    .main-container {
+      display: flex;
+      height: 100vh;
+      padding: 0px;
+      margin: 0px;
+    }
+    .sidebar {
+      width: 25%;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: #eee;
+      color: #333;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+    .sidebar-logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .logo-m {
+      color: green;
+    }
+    .sidebar-chats {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+    .sidebar-buttons {
+      flex-shrink: 0;
+      padding-top: 15px;
+      margin-top: 15px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .thread {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 20px;
+      background-color: white;
+    }
+    .thread-messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      width: 100%;
+      padding-right: 15px;
+    }
+    .thread-input-container {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+    .input-wrapper {
+      display: flex;
+      width: 100%;
+    }
+    .chat-title {
+      padding: 10px 15px;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .chat-title:hover {
+      background-color: lightgrey;
+    }
+    .active-chat {
+      background-color: dodgerblue;
+      color: white;
+      font-weight: bold;
+    }
+    .sidebar-btn {
+      padding: 12px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+      font-size: 1rem;
+    }
+    .add-chat-btn {
+      background-color: green;
+    }
+    .clear-chat-btn {
+      background-color: red;
+    }
+    .message-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      gap: 12px;
+    }
+    .message {
+      padding: 12px 18px;
+      border-radius: 6px;
+      max-width: 70%;
+      font-size: 1rem;
+    }
+    .user-message {
+      background-color: dodgerblue;
+      color: white;
+      align-self: flex-end;
+    }
+    .bot-message {
+      background-color: #eee;
+      color: #333;
+      align-self: flex-start;
+    }
+    .chat-input {
+      width: 88%;
+      margin-right: 12px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .submit-btn {
+      width: 12%;
+      border: none;
+      background-color: dodgerblue;
+      color: white;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .sticky-note {
+      background-color: lightyellow;
+      border: 1px solid goldenrod;
+      padding: 17px;
+      margin-top: 15px;
+      border-radius: 5px;
+      position: relative;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .sticky-note-close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #888;
+    }
+    `}
+  </style>
+);
 
 export default App;
