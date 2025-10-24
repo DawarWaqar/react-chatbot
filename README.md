@@ -1,11 +1,10 @@
 # React Chatbot
 
-Simple chatbot application built with React and vanilla CSS (no external styling framework). 
+Simple chatbot application built with React and vanilla CSS under testing conditions. 
 
 ## Tech Stack
 - React
 - Vanilla CSS
-- Vite
 
 ## Links
 - **Live Demo**: http://ml-chatbot-99.s3-website-us-east-1.amazonaws.com/
