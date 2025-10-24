@@ -1,6 +1,6 @@
 # React Chatbot
 
-Simple chatbot in one file (src/App.jsx) with no external styling framework used, as required. Tech Stack: React and vanilla CSS. 
+Simple chatbot in one file (src/App.jsx) with no external styling framework used, as required.
 
 ## Tech Stack
 - React
