@@ -1,6 +1,6 @@
 # React Chatbot
 
-Simple chatbot application built with React and vanilla CSS under testing conditions. 
+Simple chatbot in one file (src/App.jsx) with no external styling framework used, as required. Tech Stack: React and vanilla CSS. 
 
 ## Tech Stack
 - React
