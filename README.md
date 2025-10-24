@@ -1,3 +1,12 @@
-# Simple chatbot in one file (my-app/src/App.jsx) with no external styling framework used, as required. Tech Stack: React and vanilla CSS.
+# React Chatbot
 
-- Link: http://ml-chatbot-99.s3-website-us-east-1.amazonaws.com/
+Simple chatbot application built with React and vanilla CSS (no external styling framework). 
+
+## Tech Stack
+- React
+- Vanilla CSS
+- Vite
+
+## Links
+- **Live Demo**: http://ml-chatbot-99.s3-website-us-east-1.amazonaws.com/
+- **GitHub**: https://github.com/DawarWaqar/react-chatbot
